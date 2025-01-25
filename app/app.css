@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.calculator-btn {
+    margin: 2;
+    padding: 10;
+    background-color: #f8f9fa;
+    border-radius: 8;
+    font-size: 20;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: collapse;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}

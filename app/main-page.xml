@@ -1,0 +1,40 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Raksha Calculator" icon="" />
+    <GridLayout rows="auto, auto, *" class="p-4">
+        <!-- Calculator Display -->
+        <Label row="0" text="{{ display }}" class="text-right text-3xl p-4 bg-gray-100 rounded" textWrap="true" />
+        
+        <!-- Calculator Buttons -->
+        <GridLayout row="1" columns="*, *, *, *" rows="auto, auto, auto, auto" class="mt-4">
+            <Button row="0" col="0" text="7" tap="{{ onNumber }}" class="calculator-btn" />
+            <Button row="0" col="1" text="8" tap="{{ onNumber }}" class="calculator-btn" />
+            <Button row="0" col="2" text="9" tap="{{ onNumber }}" class="calculator-btn" />
+            <Button row="0" col="3" text="÷" tap="{{ onOperator }}" class="calculator-btn" />
+            
+            <Button row="1" col="0" text="4" tap="{{ onNumber }}" class="calculator-btn" />
+            <Button row="1" col="1" text="5" tap="{{ onNumber }}" class="calculator-btn" />
+            <Button row="1" col="2" text="6" tap="{{ onNumber }}" class="calculator-btn" />
+            <Button row="1" col="3" text="×" tap="{{ onOperator }}" class="calculator-btn" />
+            
+            <Button row="2" col="0" text="1" tap="{{ onNumber }}" class="calculator-btn" />
+            <Button row="2" col="1" text="2" tap="{{ onNumber }}" class="calculator-btn" />
+            <Button row="2" col="2" text="3" tap="{{ onNumber }}" class="calculator-btn" />
+            <Button row="2" col="3" text="-" tap="{{ onOperator }}" class="calculator-btn" />
+            
+            <Button row="3" col="0" text="0" tap="{{ onNumber }}" class="calculator-btn" />
+            <Button row="3" col="1" text="." tap="{{ onDecimal }}" class="calculator-btn" />
+            <Button row="3" col="2" text="=" tap="{{ onEqual }}" class="calculator-btn" />
+            <Button row="3" col="3" text="+" tap="{{ onOperator }}" class="calculator-btn" />
+        </GridLayout>
+
+        <!-- Hidden Help Section (shown when secret code is entered) -->
+        <StackLayout row="2" class="{{ showHelp ? 'visible' : 'hidden' }} mt-4">
+            <Button text="आपातकालीन SOS" tap="{{ onSOS }}" class="bg-red-600 text-white p-4 rounded" />
+            <Button text="निकटतम आश्रय" tap="{{ onFindShelters }}" class="bg-blue-500 text-white p-4 rounded mt-2" />
+            <Button text="कानूनी सहायता" tap="{{ onLegalHelp }}" class="bg-green-500 text-white p-4 rounded mt-2" />
+            <Button text="परामर्श सेवाएं" tap="{{ onCounseling }}" class="bg-purple-500 text-white p-4 rounded mt-2" />
+            <Button text="आपातकालीन संपर्क" tap="{{ onContacts }}" class="bg-yellow-500 text-white p-4 rounded mt-2" />
+            <Button text="त्वरित बाहर निकलें" tap="{{ onQuickExit }}" class="bg-gray-800 text-white p-4 rounded mt-2" />
+        </StackLayout>
+    </GridLayout>
+</Page>
